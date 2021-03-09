@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--website(https://materializecss.com/getting-started.html)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- https://materializecss.com/icons.html -->
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--https://fontawesome.com/kits/9411c5637c/use -->
+    <script src="https://kit.fontawesome.com/9411c5637c.js" crossorigin="anonymous"></script>
+
+    <title>Emarketing</title>
+</head>
+<style>
+    body{
+        background-color: rgb(72, 78, 78);
+    }
+</style>
+<body onload="render()">
+    <header>
+        <nav class="brown lighten-1">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo center">
+                    <i style="font-size: 3rem!important;" class="material-icons">store</i>Femi's Store
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div  class="container " >
+        <div class="row" id="row2">
+            <table class="table table-success table-striped">
+                <thead >
+                    <tr class="table table-dark table-striped" >
+                        <th >#</th>
+                        <th >Product</th>
+                        <th >Description</th>
+                        <th >Quantity</th>
+                        <th >Price</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="table">
+    
+                </tbody>
+                <tfoot id="total"></tfoot>
+            </table>
+            
+        </div>
+        <a href="index.html" class="btn btn-secondary center">Continue Shopping</a>
+    </div>
+    <!--Modal-->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <form id="formCart" class="col s12">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="email" required id="userName" class="validate">
+                        <label for="icon_prefix">First Name</label>
+                    </div>
+    
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" required id="userEmail" class="validate">
+                        <label for="icon_prefix">E-mail</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="userSelect" class="browser-default">
+                            <option value="Credit Card 1"> Credit Card 1</option>
+                            <option value="Credit Card 2"> Credit Card 2</option>
+                            <option value="Credit Card 3"> Credit Card 3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn modal-close waves-effect wave-light btn-primary" type="submit" name="action">Submit 
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <br>
+                    <a href="cart.html" class="btn btn-secondary center">click to check your order again</a>
+                </form>
+            </div>
+        </div>
+    </div>
+   
+    <!--modal end stuff-->
+
+    <!-- https://code.jquery.com-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--website(https://materializecss.com/getting-started.html) for js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--https://www.jsdelivr.com/package/npm/sweetalert2?path=dist&version=8.11.7&tab=collection-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+
+    <!-- https://cdnjs.com/libraries/wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous"></script>
+
+        
+    <!-- https://console.firebase.google.com/u/0/project/marketing-cdc03/overview -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+
+    
+<script src="/js/cart.js"></script>
+</body>
+
+</html>
