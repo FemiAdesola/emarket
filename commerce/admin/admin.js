@@ -121,7 +121,7 @@ var firebaseConfig = {
 // initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var order = firebase.database().ref('orders');
+var order = firebase.database().ref('cart');
 
 order.on('child_added', function (data) {
     var orderValue = data.val();

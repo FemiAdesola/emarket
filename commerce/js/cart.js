@@ -45,7 +45,7 @@ document.getElementById('formCart').addEventListener('submit', function (e) {
     var d = new Date();
     var t = d.getTime();
     var order = t - 300;
-    firebase.database().ref("orders").push({
+    firebase.database().ref("cart").push({
         id: t + 1,
         order: order,
         userName: userName.value,
@@ -69,6 +69,7 @@ document.getElementById('formCart').addEventListener('submit', function (e) {
 });
 
 
+
 //CLEAN
 function clean() {
     localStorage.clear();
@@ -84,13 +85,23 @@ function clean() {
             <th></th>
             <th></th>
             <th></th>
+            
 
         </tr>
 
     `;
     document.getElementById("btnBuy").style.display = "none";
     document.getElementById("btnClean").style.display = "none";
+    
 }
+
+
+
+
+
+//tn
+
+
 //  Render
 function render() {
     for (let index = 0; index < products.length; index++) {
@@ -105,6 +116,7 @@ function render() {
             <th scope ="col"></th>
             <th scope ="col">Total:$${total}.00</th>
             
+
         </tr>
         <tr>
             <th scope ="col"></th>
@@ -117,10 +129,15 @@ function render() {
             <th scope ="col">
                 <button id="btnBuy" href="#modal1" class="modal-trigger waves-effect waves-light btn-secondary">Buy</button>
             </th>
+            
         </tr>
         
     `;
 }
+
+//tn
+
+
 $(document).ready(function(){
     $('.modal').modal();
   });
