@@ -2,7 +2,7 @@
   "name": "ecommerceht",
   "version": "1.0.0",
   "description": "",
-  "main": "ext.html",
+  "main": "index.js",
   "homepage": "https://FemiAdesola.github.io/emarket",
   "scripts": {
     "deploy": "gh-pages -d commerce"
